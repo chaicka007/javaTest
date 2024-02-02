@@ -2,6 +2,10 @@ package day0;
 
 public class test {
     public static void main(String [] args){
-        System.out.println("Текст на русском здесь работает, класс");
+        int x = 10;
+        String superString = "тестовая строка";
+        String string2 = " Тестовая строка 2 ";
+        System.out.println(superString + string2);
+        System.out.println("test number " + x);
     }
 }
