@@ -1,15 +1,6 @@
-package day5;
+package day6;
 
-public class Task2 {
-    public static void main(String[] args) {
-        Motorbike bike = new Motorbike(2018, "red", "Yamaha YZF-R1M");
-        System.out.printf("Год выпуска: %d\n" +
-                "Цвет: %s\n" +
-                "Модель: %s\n",bike.getYear(),bike.getColor(),bike.getModel());
-    }
-}
-
-class Motorbike {
+public class Motorbike {
     private int year;
     private String color, model;
 
@@ -27,5 +18,12 @@ class Motorbike {
 
     public String getModel(){
         return model;
+    }
+
+    public void info() {
+        System.out.println("Это матоцоикл");
+    }
+    public int yearDifference(int year){
+        return this.year - year;
     }
 }

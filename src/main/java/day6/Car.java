@@ -1,17 +1,6 @@
-package day5;
+package day6;
 
-public class Task1 {
-    public static void main(String[] args) {
-        Car lada = new Car();
-        lada.setYear(2001);
-        lada.setColor("Yellow");
-        lada.setModel("Granta");
-
-        System.out.println("Год: " + lada.getYear() + " Цвет: " + lada.getColor() + " Модель: " + lada.getModel());
-    }
-}
-
-class Car {
+public class Car {
     private int year;
     private String color;
     private String model;
@@ -40,4 +29,10 @@ class Car {
         return model;
     }
 
+    public void info() {
+        System.out.println("Это автомобиль");
+    }
+    public int yearDifference(int year){
+        return this.year - year;
+    }
 }
