@@ -1,23 +1,54 @@
 package day0;
+
+import java.lang.reflect.Array;
 import java.util.Scanner;
+import java.util.Random;
+
 public class test {
-    public static void main(String [] args){
-        int value = -3;
-        while(value!=1){
-            System.out.println(value);
-            ++value;
-        }
-        for(byte i = 0; i <=5; i+=2){
-            System.out.println("test2, i= " + i);
-        }
-        int x = 5;
-        float y  = 6;
+    public static void main(String[] args) {
+        Cat cat1 = new Cat("Дымка");
+        Cat.test = "1";
+        System.out.println(Cat.test);
+        cat1 = new Cat("Лооол");
+        cat1.test = "2";
+        System.out.println(cat1.getTest());
+        System.out.println(Cat.test);
+        System.out.println(cat1.getName() + " " + cat1.getAge());
+        cat1.consoleOut("Лол. вывод в консоль работает");
 
-        System.out.printf("x=%d; y=%.3243f", x, y);
+    }
+}
 
-        Scanner in  = new Scanner(System.in);
-        System.out.println("\ngive me a number: ");
-        int number = in.nextInt();
-        System.out.println("number is "+ number);
+class Cat{
+    private String name;
+    private int agee;
+
+    public static String test;
+    public Cat(String name){
+        this.name = name;
+    }
+    public void setName(String name){
+        this.name = name;
+    }
+    public String getName(){
+        return name;
+    }
+
+    public String getTest(){
+        return test;
+    }
+    public void setAgeeee(int Userage) {
+        if(Userage>0) {
+            agee = Userage;
+        }else{
+            System.out.println("Возвраст должен быть положительным ");
+        }
+    }
+
+    public void consoleOut(String console){
+        System.out.println(console);
+    }
+    public int getAge() {
+        return agee;
     }
 }

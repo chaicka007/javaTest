@@ -2,7 +2,7 @@ package day6;
 import java.util.Random;
 public class Teacher {
     private String name, subject;
-    Teacher(String name, String subject){
+    public Teacher(String name, String subject){
         this.name = name;
         this.subject = subject;
     }
